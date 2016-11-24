@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="The Annual Techno management fest of NIT Jamshedpur">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Ojass 2017</title>
+    <meta name="author" content="Ojass 2017">
+    <!--<meta name="theme-color" content="">-->
+    <link rel="shortcut icon" href="images/ojass_black_nb.png">
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="css/customfonts.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/wowstyle.css"/>
+    <link rel="stylesheet" type="text/css" href="css/modal.css"/>
+
+</head>
+<body>
+<div id="preloader" style="background:rgba(0,0,0,1);z-index:9;position:absolute;width:100%;height:100%;top:0;left:0">
+
+
+</div>
+<div class="el"
+     style=" position:absolute;width:200px;height:200px;top:50%;right:50%;margin-right:-100px;margin-top:-100px;z-index:10"></div>
+<audio>
+    <source src="audio/pi.mp3" type="audio/mpeg"></source>
+</audio>
+<audio loop>
+    <source src="audio/loop.ogg" type="audio/ogg"></source>
+</audio>
+<audio>
+    <source src="audio/orbroll1.mp3" type="audio/mpeg"></source>
+</audio>
+<audio>
+    <source src="audio/orbroll2.mp3" type="audio/mpeg"></source>
+</audio>
+<audio loop>
+    <source src="audio/tick.mp3" type="audio/mpeg"></source>
+</audio>
+<div id="DateCountdown" data-date="2017-03-24 00:00:00" style="width: 30%;opacity:0"></div>
+<div id="wowslider-container1">
+    <div class="ws_images">
+        <ul>
+            <li><img src="images/slider/4.jpg" alt="responsive content slider" id="wows1_0"/></li>
+            <li><img src="images/slider/5.jpg" alt="featured content slider" id="wows1_1"/></li>
+            <li><img src="images/slider/6.jpeg" alt="html content slider" id="wows1_2"/></li>
+        </ul>
+    </div>
+</div>
+<div id="pattern1"></div>
+<div id="pattern"></div>
+<div class="top-right" style="opacity:0;">
+    <a target="_blank" href="gallery/gallery.html">Gallery</a>
+    <div class="line" style="width:30px;margin-top:15px;"></div>
+    <a href="#" id="openTeamModal">Team</a>
+</div>
+<div class="title-wrapper">
+    <div class="title">
+        <p class="ojass" style="opacity:0;"><img src="images/ojlogo.png"
+                                                 style="width: 350px;height: auto;vertical-align: text-top"></p>
+        <p class="annual" style="opacity:0;margin-top:20px;">The Annual Techno Management fest of <br><b>NIT
+            Jamshedpur</b></p>
+    </div>
+    <div class="hline">&nbsp;</div>
+    <img class="circle" src="images/circle1.png"/>
+    <!--div class="divider">
+        &nbsp;
+    </div-->
+    <div class="caption">
+        <p style="opacity:0;margin-top:20px;">24th - 26th March 2017</p>
+        <p style="opacity:0;margin-top:20px;">Dream . Dare . Achieve</p>
+
+    </div>
+    <!--<br/><br/><br/>-->
+    <!--<img src="images/logo.png">-->
+</div>
+
+<div class="mascot-wrapper">
+    <img src="images/aXoMejNKhu.svg">
+</div>
+
+<div class="hastag">#Z-Tron</div>
+<div class="throwback" style="margin-right:-300px">
+    THROW_BACKS
+    <ul>
+        <li>- 2016 -</li>
+        <li>- 2015 -</li>
+        <li>- 2014 -</li>
+    </ul>
+</div>
+<div class="footer" style="opacity:0">
+    <ul>
+        <li>
+            Social Links
+            <div class="content">
+                <ul>
+                    <li><a target="_blank" href="https://www.facebook.com/Ojassnitjamshedpur/"><i
+                            class="fa fa-facebook-official"></i></a></li>
+                    <li>
+                        <div class="line"></div>
+                    </li>
+                    <li><a target="_blank"
+                           href="https://m.youtube.com/channel/UC-fQXml1kSDPe1GIW4XrZsg?rdm=2b4fa76m0&client=mv-google"><i
+                            class="fa fa-youtube"></i></a></li>
+                    <li>
+                        <div class="line"></div>
+                    </li>
+                    <li><a target="_blank" href="https://www.instagram.com/ojass_nitjsr/"><i
+                            class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            <div class="dot"></div>
+        </li>
+        <li>
+            Subscribe
+            <div class="content" ng-controller="subscribeController">
+                <ul>
+                    <form id="subscribe">
+                        <li><input type="email" name="email" placeholder="E-Mail" class="emailform" id="subscribeEmail"
+                                   ng-model="subscribeEmail">
+                        </li>
+                        <li>
+                            <button value="Subscribe" class="emailform submit"
+                                    style="border:1px solid white;width:110px" ng-click="sendSubscription()">Subscribe
+                            </button>
+                        </li>
+
+                    </form>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="dot"></div>
+        </li>
+        <li>
+            Copyright
+        </li>
+        <li>
+            <div class="dot"></div>
+        </li>
+        <li id="toggle_sound">
+            <img src="images/audio_on.gif">
+            <div class="content">
+                Toggle Sound
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="modal" id="teamModal">
+    <p id="closeTeamModal"><i class="fa fa-close fa-3x"></i></p>
+    <p class="modalHeading">#team</p>
+    <div class="modal-body">
+        <div class="tabs-list">
+            <ul>
+                <li class="tab-link-active core" onclick="switchtab('core')">Core</li>
+                <li class='pnd' onclick="switchtab('pnd')">Planning & Development</li>
+                <li class='ca' onclick="switchtab('ca')">Corporate Affairs</li>
+                <li class='pr' onclick="switchtab('pr')">Public Relations</li>
+                <li class='em' onclick="switchtab('em')">Event Management</li>
+                <li class='logistics' onclick="switchtab('logistics')">Logistics</li>
+                <li class='hospitality' onclick="switchtab('hospitality')">Hospitality</li>
+                <li class='web' onclick="switchtab('web')">Web Ops</li>
+                <li class='creative' onclick="switchtab('creative')">Creative</li>
+                <li class='rob' onclick="switchtab('rob')">Robotics & Media Relations</li>
+            </ul>
+        </div>
+        <div class="tabs-body">
+            <div class="tab active-tab" id="core">
+                <div class="row">
+                    <ul>
+                        <li style="margin-left:30%;">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/techsec.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Sourabh Singh</li>
+                                    <li>Technical Secretary</li>
+                                    <li>9122981287</li>
+                                    <li>techsec.sc@nitjsr.ac.in</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <ul>
+
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/aamir.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Aamir Khan</li>
+                                    <li>Joint Secretary</li>
+                                    <li>7209780930</li>
+                                    <li>khanamir1101@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/sid.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Siddhartha Shankar Anand</li>
+                                    <li>General Secretary</li>
+                                    <li>7870363708</li>
+                                    <li>siddhartha.s.anand@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/pd.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>PD Chaudhary</li>
+                                    <li>Treasurer</li>
+                                    <li>8252649320</li>
+                                    <li>pdchaudhary555@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/bhargav.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Korada Bhargav</li>
+                                    <li>Spokesperson</li>
+                                    <li>7761829355</li>
+                                    <li>catchbhargavk@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab" id="pnd">
+                <div class="row">
+                    <ul>
+
+                        <li style="margin-left:30%">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/praveer.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Praveer Varun Sharma</li>
+                                    <li>7762827779</li>
+                                    <li>praveersharma46@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/PARIKSHIT.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Parikshit Chadha</li>
+                                    <li>8051137587</li>
+                                    <li>parikshitchadha@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/mayank_new.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Mayank Agarwal</li>
+                                    <li>8102502220</li>
+                                    <li>mayankagarwal2212@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab" id="ca">
+                <div class="row">
+                    <ul>
+
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/vishal khare.png'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Vishal Khare</li>
+                                    <li>7319706481</li>
+                                    <li>vishalkhare39@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/ankitaca.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Ankita Kumari</li>
+                                    <li>7763811266</li>
+                                    <li>ankita.nitjsr19@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/v vivek.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Vivek Vejandla</li>
+                                    <li>8978865565</li>
+                                    <li>vivekvejandla@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/anwesha.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Anwesha Chakraborty</li>
+                                    <li>8102593903</li>
+                                    <li>anwesha.chakraborty5695@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab" id="pr">
+                <div class="row">
+                    <ul>
+
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/sanghvi.JPG'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Siddharth Sanghvi</li>
+                                    <li>9304654686</li>
+                                    <li>siddharthsanghvi013@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/kothari.JPG'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Raj Kothari</li>
+                                    <li>9420903156</li>
+                                    <li>therajko@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/nikhil.jpeg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Katiki Nikhil</li>
+                                    <li>9430165010</li>
+                                    <li>nikhildec31@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/neha.jpeg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Neha Saw</li>
+                                    <li>9006755900</li>
+                                    <li>neha.khushbo@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab" id="em">
+                <div class="row">
+                    <ul>
+
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/akshay_tyagi.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Akshay Tyagi</li>
+                                    <li>7209530361</li>
+                                    <li>tyagiakshay.95@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/ankur.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Kumar Ankur</li>
+                                    <li>7631167282</li>
+                                    <li>akaaronank@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/rahul.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Meka Rahul</li>
+                                    <li>8235367127</li>
+                                    <li>mekarahul@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/shetu.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Shetu</li>
+                                    <li>7782027199</li>
+                                    <li>shetu.nitjsr13@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab" id="logistics">
+                <div class="row">
+                    <ul>
+
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/himanshu.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Himanshu Sharma</li>
+                                    <li>7209387418</li>
+                                    <li>hs60360@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/aditya.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Aditya Ghodela</li>
+                                    <li>8952925333</li>
+                                    <li>aditya.gdl3@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/k harshvardhan.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>K Harshavardhana</li>
+                                    <li>9430164998</li>
+                                    <li>kharshavardhana@yahoo.co.in</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/durgesh.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Durgesh</li>
+                                    <li>7070450640</li>
+                                    <li>vijaydurgesh63@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab" id="hospitality">
+                <div class="row">
+                    <ul>
+
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/ravi.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Ravi Roshan</li>
+                                    <li>7549405304</li>
+                                    <li>raviroshanraj123@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/deepak.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Deepak Kumar</li>
+                                    <li>7870357237</li>
+                                    <li>deepakdk7237@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/SHAHI.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Abhishek Shahi</li>
+                                    <li>7870528490</li>
+                                    <li>shahibholu007@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/meghana.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Meghana Priya</li>
+                                    <li>9608667456</li>
+                                    <li>meghanapriya.mp@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab" id="rob">
+                <div class="row">
+                    <ul>
+
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/amritesh.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Amritesh Ranjan</li>
+                                    <li>9608667456</li>
+                                    <li>amriteshjsr@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/aman.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Aman Kumar</li>
+                                    <li>8541918655</li>
+                                    <li>amankrnayak@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/sourabh.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Sourabh Sharma</li>
+                                    <li>7209824669</li>
+                                    <li>sourabhnit012@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/default.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Amit Kumar</li>
+                                    <li>9162659555</li>
+                                    <li>amtkmr501@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/pratibha.jpeg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>V.S. Pratibha</li>
+                                    <li>8235364241</li>
+                                    <li>vspratibha2013@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/ankita.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Ankita Gupta</li>
+                                    <li>9973652350</li>
+                                    <li>ankitaguptanitjsr@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab" id="web">
+                <div class="row">
+                    <ul>
+
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/suraj.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Suraj Potnuru</li>
+                                    <li>8292980033</li>
+                                    <li>surajpotnuru7@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/shubham.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Shubham Singh</li>
+                                    <li>8873856624</li>
+                                    <li>shubhamcse@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/mukesh.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Mukesh Kumar</li>
+                                    <li>9472706374</li>
+                                    <li>mukeshkumarmehra76@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/rishav.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Rishav Sagar</li>
+                                    <li></li>
+                                    <!--li>shetu.nitjsr13@gmail.com</li-->
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab" id="creative">
+                <div class="row">
+                    <ul>
+
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/naveen.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Naveen Sai Kiran</li>
+                                    <li>9959232139</li>
+                                    <li>naveensaikiran@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/seshu.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Seshu</li>
+                                    <li>9430164996</li>
+                                    <li>seshuinapanuri@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/tarun.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>I S Venkat Tarun</li>
+                                    <li>7762828292</li>
+                                    <li>tarunisv@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img data="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                 data-src='teampics/satyam.jpg'/>
+                            <div class="mem-details">
+                                <ul>
+                                    <li>Satyam Chaubey</li>
+                                    <li>8051057553</li>
+                                    <li>satyamchaubey94@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-cookies.min.js"></script>
+<script src="js/angular-ui-router.min.js"></script>
+<!--script src="js/jquery-3.1.1.min.js"></script-->
+<script type="text/javascript" src="js/wowslider.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/TimeCircles.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/main1.js"></script>
+<script src="js/jquery.unveil.js"></script>
+<script>
+    var app = angular.module('ojass', ['ui.router', 'ngCookies']);
+    angular.element(document).ready(function () {
+        angular.bootstrap(document, ['ojass']);
+    });
+    app.config(['$httpProvider','$sceDelegateProvider', function ($httpProvider,$sceDelegateProvider) {
+        $sceDelegateProvider.resourceUrlWhitelist([
+            // Allow same origin resource loads.
+            'self',
+            // Allow loading from our assets domain.  Notice the difference between * and **.
+            'http://nitjsr.ac.in:3000/api/**'
+        ]);
+        $httpProvider.interceptors.push(function ($cookies) {
+            return {
+                'request': function (config) {
+                    $httpProvider.defaults.headers.common["x-access-token"] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI0ZDNiYjFiMC1hOTdlLTExZTYtYWM2MC1hNThjMjc3ODRkMTMiLCJpYXQiOjE0NzkwMjcxNjh9.zJNVc1APYdUiEBzfIfnnnXAKxd-BSce70eR-eGzkvGY';
+                    return config;
+                }
+            }
+        });
+    }]);
+    app.controller('subscribeController', ['$scope','$http', function ($scope,$http) {
+        $scope.subscribeEmail = "";
+        $scope.sendSubscription = function () {
+            if ($scope.subscribeEmail == "") {
+                alert('Enter an Email id');
+            } else {
+                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                if(re.test($scope.subscribeEmail) == true){
+                    var data = {
+                      email: $scope.subscribeEmail
+                    };
+                    $http.post("http://nitjsr.ac.in:3000/api/subscribe",data).then(function(results){
+                        if(results.data.success == false){
+                            if(results.data.message == "No Token Provided"){
+
+                            }else if(results.data.message = "Already Subscribed"){
+                                alert("Already Subscribed");
+                            }
+                        }else{
+                            if(results.data.message == "Successfully Subscribed") {
+                                alert("Successfully Subscribed");
+                                $scope.subscribeEmail == "";
+                            }
+                        }
+                    });
+                }else{
+                    alert('Please enter a valid email');
+                    $scope.subscribeEmail = "";
+                }
+            }
+        };
+    }]);
+</script>
+<script>
+    $(document).ready(function () {
+        $(".tabs-body img").unveil();
+    });
+    $("#openTeamModal").click(function (event) {
+        event.stopPropagation();
+        $("#core img").trigger("unveil");
+        TweenMax.to($('.ojass'), 0.5, {css: {marginLeft: '-60px', marginTop: '-60px'}, ease: Expo.easeInOut, delay: 0});
+        TweenMax.to($('.mascot-wrapper img'), 0.5, {
+            css: {marginLeft: '-20px', marginBottom: '-20px'},
+            ease: Expo.easeInOut,
+            delay: 0
+        });
+        TweenMax.to($('.footer,.hastag'), 0.5, {
+            css: {marginLeft: '-20px', marginBottom: '-50px'}, ease: Expo.easeInOut, delay: 0, onComplete: function () {
+                $("#teamModal").css({
+                    'display': 'block'
+                });
+                $('.annual').hide();
+                $('.hline').hide();
+                $('.circle').hide();
+                $('.caption').hide();
+                $('#DateCountdown').hide();
+                $('.throwback').hide();
+            }
+        });
+
+
+    });
+    $("#closeTeamModal").click(function (event) {
+        event.stopPropagation();
+        TweenMax.to($('.ojass'), 0.5, {css: {marginLeft: 0, marginTop: 0}, ease: Expo.easeInOut, delay: 0});
+        TweenMax.to($('.mascot-wrapper img'), 0.5, {
+            css: {marginLeft: 0, marginBottom: 0},
+            ease: Expo.easeInOut,
+            delay: 0
+        });
+        TweenMax.to($('.footer,.hastag'), 0.5, {css: {marginLeft: 0, marginBottom: 0}, ease: Expo.easeInOut, delay: 0});
+        $("#teamModal").css({
+            'display': 'none'
+        });
+        $('.annual').show();
+        $('.hline').show();
+        $('.circle').show();
+        $('.caption').show();
+        $('#DateCountdown').show();
+        $('.throwback').show();
+    });
+
+    function switchtab(tab) {
+        $('.tabs-list ul').find('.tab-link-active').removeClass('tab-link-active');
+        $(".tabs-list ul li." + tab).addClass('tab-link-active');
+        $(".tabs-body").find('.active-tab').removeClass('active-tab');
+        $(".tabs-body #" + tab).addClass('active-tab');
+        $(".tabs-body #" + tab + " img").trigger("unveil");
+    }
+</script>
+<script>
+    $(".footer>ul>li").hover(function () {
+        $(this).find(".content").css("display", "block");
+        var del = 0;
+        $(this).find(".content li").each(function () {
+            TweenMax.to($(this), 0.07, {css: {opacity: 1}, ease: Expo.easeInOut, delay: del});
+            del = del + 0.07;
+        });
+    }, function () {
+        $(this).find(".content").css("display", "none");
+        $(this).find(".content li").css('opacity', '0');
+    });
+
+    var audio = document.getElementsByTagName("audio")[0];
+    var loop = document.getElementsByTagName("audio")[1];
+    var sphereenter = document.getElementsByTagName("audio")[2];
+    var sphereleave = document.getElementsByTagName("audio")[3];
+    //var tick = document.getElementsByTagName("audio")[4];
+    loop.volume = 0.8;
+    $("#DateCountdown").TimeCircles({
+        "animation": "smooth",
+        "bg_width": 1.2,
+        "fg_width": 0.02,
+        "circle_bg_color": "#60686F",
+        "time": {
+            "Days": {
+                "text": "Days",
+                "color": "#fff",
+                "show": true
+            },
+            "Hours": {
+                "text": "Hours",
+                "color": "#fff",
+                "show": true
+            },
+            "Minutes": {
+                "text": "Minutes",
+                "color": "#fff",
+                "show": true
+            },
+            "Seconds": {
+                "text": "Seconds",
+                "color": "#fff",
+                "show": true
+            }
+        }
+    });
+    $(window).load(goToCorner());
+    $(window).load(function () {
+        $('.tabs-body').css('width', $(window).width() - $('.tabs-list ul').width() - 10);
+        var w = 0.48 * ($(window).width() - $('.tabs-list ul').width() - 20) - 180;
+//document.write(w);
+        $('.mem-details').css('width', w);
+        TweenMax.to($('.ojass'), 0.5, {css: {opacity: 1}, ease: Expo.easeInOut, delay: 2});
+        TweenMax.to($('.top-right'), 0.5, {css: {opacity: 1}, ease: Expo.easeInOut, delay: 2});
+        TweenMax.to($('.footer'), 0.3, {css: {opacity: 1}, ease: Expo.easeInOut, delay: 2.5});
+        var del = 2.5;
+        $('.footer').find("li").each(function () {
+            TweenMax.to($(this), 0.07, {css: {opacity: 0.5}, ease: Expo.easeInOut, delay: del});
+            del = del + 0.07;
+        });
+        TweenMax.to($('#DateCountdown'), 0.1, {css: {opacity: 1}, ease: Expo.easeInOut, delay: 2.8});
+        TweenMax.to($('#DateCountdown'), 0.3, {bezier: [{zoom: 1.05}, {zoom: 1}], ease: Expo.easeInOut, delay: 2.8});
+        TweenMax.to($('.caption p:nth-child(1)'), 0.2, {
+            css: {opacity: 1, marginTop: 0},
+            ease: Expo.easeInOut,
+            delay: 3.1
+        });
+        TweenMax.to($('.caption p:nth-child(2)'), 0.2, {
+            css: {opacity: 1, marginTop: 0},
+            ease: Expo.easeInOut,
+            delay: 3.3
+        });
+        TweenMax.to($('.circle'), 0.2, {css: {opacity: 1}, ease: Expo.easeInOut, delay: 1.8});
+        TweenMax.to($('.annual'), 0.2, {css: {opacity: 1, marginTop: 0}, ease: Expo.easeInOut, delay: 3.7});
+        TweenMax.to($('.hline'), 1, {css: {height: '8%'}, ease: Expo.easeInOut, delay: 3.9});
+        TweenMax.to($('.throwback'), 1, {css: {marginRight: 0}, ease: Expo.easeInOut, delay: 3.9});
+    });
+    //$('#DateCountdown').hover(function(){tick.play();},function(){tick.pause()});
+    //$('#subscribe').on('submit',function(e){e.preventDefault();
+    //	$.ajax({
+    //		'headers': {
+    //			'x-access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI0ZDNiYjFiMC1hOTdlLTExZTYtYWM2MC1hNThjMjc3ODRkMTMiLCJpYXQiOjE0NzkwMjcxNjh9.zJNVc1APYdUiEBzfIfnnnXAKxd-BSce70eR-eGzkvGY',
+    //			'Content-Type':'application/x-www-form-urlencoded'
+    //		},
+    //
+    //		'url':'http://www.nitjsr.ac.in:3000/api/subscribe',
+    //		'type':'post',
+    //		'data':$(this).serialize(),
+    //		'dataType':'json',
+    //
+    //	});
+    //});
+
+</script>
+</body>
+</html>

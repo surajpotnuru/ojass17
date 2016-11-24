@@ -1,0 +1,428 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*SVG ANIMATION*/
+.svg-wrapper {
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    width: 100px;
+
+}
+
+.shape {
+    fill: transparent;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: #ffffff;
+}
+
+.text {
+    color: #fff;
+    font-size: 15px;
+    position: relative;
+    top: -29px;
+}
+
+@keyframes draw {
+    0% {
+        stroke-dasharray: 140 540;
+        stroke-dashoffset: -474;
+        stroke-width: 8px;
+    }
+    100% {
+        stroke-dasharray: 760;
+        stroke-dashoffset: 0;
+        stroke-width: 2px;
+    }
+}
+
+.svg-wrapper:hover .shape {
+    -webkit-animation: 0.5s draw linear forwards;
+    animation: 0.5s draw linear forwards;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px !important;
+}
+
+#particles-js {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.big-center-title {
+    font-family: Montserrat;
+    font-size: 40px;
+    margin: 100px;
+}
+
+.dots-navigator {
+    position: absolute;
+    top: 40vh;
+    right: 50px;
+}
+
+.dots-navigator .dot {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.dot-selected {
+    background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+#particles-js{
+    filter: blur(5px);
+}
+.background {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    -webkit-transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+    transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+.background:first-child {
+
+    /*background: #136a8a; !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(to left, #136a8a, #267871); !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to left, #136a8a, #267871); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+    background: radial-gradient(ellipse at bottom, lightgrey 0%, #000000 100%)
+    /*background: radial-gradient(ellipse at bottom, #1565C0 0%, #000022 100%)*/
+
+}
+
+.background:nth-child(2) {
+    background: #1565C0;
+    top: 100vh;
+}
+
+.background:nth-child(3) {
+    background: #2E7D32;
+    top: 200vh;
+}
+
+.title-wrapper {
+    width: 50vw;
+    text-align: center;
+    color: #eeeeee;
+    margin-top: 15vh;
+    float: left;
+}
+.mascot-wrapper{
+    float: left;
+    width: 40vw;
+}
+.mascot-wrapper img{
+    width: 500px;
+    margin: 100px;
+}
+.title p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 65px;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+.title p:nth-child(2) {
+    font-size: 20px;
+    font-family: "Angerpoise Lampshade";
+    letter-spacing: 5px;
+}
+
+.caption p {
+    font-family: "Good Times", sans-serif;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+.title p span {
+    font-size: 20px;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    bottom: 0px;
+}
+
+.footer > div {
+    float: left;
+    display: inline-block;
+    position: relative;
+}
+
+.footer .social-links {
+    width: 50%;
+}
+
+.footer .nav-menu {
+    width: 50%;
+    text-align: right;
+}
+
+.social-links ul li i {
+    font-size: 20px;
+}
+
+.nav-menu ul {
+    width: 100%;
+    position: relative;
+    height: 30px;
+}
+
+.nav-menu ul li {
+    text-align: center;
+    text-transform: uppercase;
+    list-style: none;
+    display: inline-block;
+    margin: 0px 15px;
+    padding: 5px 15px;
+    font-size: 15px;
+    font-family: SansSerif;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+#galleryLink, #teamLink {
+    /*border-top: 1px solid transparent;*/
+    /*border-bottom: 1px solid transparent;*/
+    cursor: pointer;
+}
+
+#galleryLink:hover, #teamLink:hover {
+    /*border-top: 1px solid white;*/
+    /*border-bottom: 1px solid white;*/
+}
+
+#subscribeLink {
+    /*border: 1px solid white;*/
+    /*padding: 10px;*/
+    cursor: pointer;
+}
+
+/*#subscribeLink:hover {*/
+/*color: rgba(0,0,0,0.7);*/
+/*background: white;*/
+/*}*/
+
+.modal-wrapper {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+.modal {
+    width: 300px;
+    height: auto;
+    background: rgba(0,0,0,0.7);
+    margin: 200px auto;
+    position: relative;
+    color: white;
+    font-size: 15px;
+}
+
+.modal-body {
+    width: 100%;
+    position: relative;
+    padding: 50px;
+
+}
+
+.modal-body input {
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    padding: 10px 0px;
+    -webkit-appearance: none;
+    outline: none;
+    color: white;
+    background: none;
+}
+
+.close-modal {
+    color: #ffffff;
+    margin: 10px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.social-links ul li i {
+    color: white;
+    cursor: pointer;
+}
+
+.social-links ul {
+    list-style-type: none;
+}
+
+.social-links ul li {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+}
+
+.side-bar {
+    width: 20%;
+    position: relative;
+    height: 100%;
+    background: #eeeeee;
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.gallery-wrapper, .team-wrapper {
+    width: 75%;
+    position: relative;
+    height: 100%;
+    background: transparent;
+    float: left;
+    display: inline-block;
+}
+
+.gallery-side-bar-toggler, .team-side-bar-toggler {
+    position: absolute;
+    width: 27px;
+    height: 35px;
+    z-index: 99;
+    margin: 20px 10px;
+    cursor: pointer;
+}
+
+.stripe {
+    width: 100%;
+    height: 3px;
+    margin: 6px 0px;
+    border-radius: 2px;
+
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.gallery-side-bar-toggler .stripe {
+    background: #1565C0;
+}
+
+.team-side-bar-toggler .stripe {
+    background: #2E7D32;
+}
+
+.gallery-side-bar-toggler.open .stripe:nth-child(1), .team-side-bar-toggler.open .stripe:nth-child(1) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.gallery-side-bar-toggler.open .stripe:nth-child(2), .team-side-bar-toggler.open .stripe:nth-child(2) {
+    margin-left: 5px;
+}
+
+.gallery-side-bar-toggler.open .stripe:nth-child(3), .team-side-bar-toggler.open .stripe:nth-child(3) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.sidebar-links {
+    width: 100%;
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 70px;
+    font-family: Montserrat;
+    color: #444444;
+    font-size: 15px;
+    min-width: 100%;
+}
+
+.sidebar-links li {
+    padding: 20px 15px;
+    border-top: 1px solid #444444;
+    cursor: pointer;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    min-width: inherit;
+
+}
+
+.sidebar-links li:last-child {
+    border-bottom: 1px solid #444444;
+}
+
+.sidebar-links li:hover {
+    color: #1565C0;
+}
+
+.gallery-wrapper, .team-wrapper {
+    color: white;
+}
+.divider{
+    width: 45%;
+    position: relative;
+    border-bottom: 1px solid white;
+    margin: 20px auto;
+}

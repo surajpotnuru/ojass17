@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.modal {
+    position: fixed;
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    margin: 0px !important;
+}
+#closeTeamModal{
+    margin: 20px;
+    right: 20px;
+    top: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+.modalHeading{
+    font-family: "Open Sans";
+    color: white;
+    margin: 50px auto 0;
+    width: 50px;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 35px;
+}
+.modal-body{
+    position: relative;
+    width: 100%;
+    padding: 0px;
+}
+.tabs-list{
+    padding: 5px;
+    position: relative;
+    color: white;
+    float:left;
+    display: inline-block;
+}
+.tabs-body{
+    margin: 10px auto;
+    padding: 5px;
+    position: relative;
+    color: white;
+    float:left;
+    display: inline-block;
+}
+.tabs-list ul{
+    list-style: none;
+    margin: 90px 0px 0 0;
+    width:360px;
+    padding:0;
+}
+.tabs-list ul li{
+    /*display: inline-block;*/
+    font-family: "Open Sans";
+    letter-spacing: 5px;
+    padding: 5px 8px;
+    margin: 5px 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 12px;
+    opacity: 0.5;
+    text-align: center;
+}
+.tabs-list ul li:hover{
+    opacity:1;
+}
+.row{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.row ul{
+    list-style: none;
+    padding:0;
+}
+.row ul li{
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+    width:48%;
+}
+.row ul li img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    float:left;
+    margin:0;
+	background-repeat: no-repeat;
+	background-image: url('../images/ajax-loader.gif');
+	background-position:center;
+}
+.row ul li div{
+    float: left;
+    background: rgba(255,255,255,0);
+    padding: 5px;
+    color: white;
+    /*border: 2px solid white;*/
+    width: auto;
+    margin-left: 20px;
+    height:130px;
+}
+.row ul li ul{
+    padding: 10px;
+    
+}
+.mem-details li{
+    width:auto !important;
+}
+.row ul li ul li{
+    display: block;
+    margin: 5px 0px;
+    padding: 0px;
+}
+.tab-link-active{
+    opacity:1 !important;
+}
+.tab{
+    display: none;
+}
+.active-tab{
+    display: block;
+}
+.mem-details{
+    float:left;
+	font-family: "Open Sans";
+font-size:12px;
+overflow:hidden;
+    /*-webkit-transition: all 0.5s linear;*/
+    /*-moz-transition: all 0.5s linear;*/
+    /*-ms-transition: all 0.5s linear;*/
+    /*-o-transition: all 0.5s linear;*/
+    /*transition: all 0.5s linear;*/
+}
+
